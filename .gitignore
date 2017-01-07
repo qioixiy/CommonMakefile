@@ -2,3 +2,8 @@
 /.settings
 /.cproject
 /.project
+
+*.a
+*.so
+*.lib
+*.dll
