@@ -1,12 +1,5 @@
-/*
- * hello.cpp
- *
- *  Created on: 2013-12-20
- *      Author: lenovo
- */
-
-#include "hello.h"
 #include <stdio.h>
+#include "hello.h"
 
 void sayhello() {
 	printf("Hello World!\n");
@@ -23,4 +16,3 @@ void sayhello() {
 	printf("release version\n");
 #endif
 }
-

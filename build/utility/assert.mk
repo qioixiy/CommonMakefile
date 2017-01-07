@@ -1,8 +1,7 @@
-#    
-#    file : assert.mk
-#    description: assert macro
 #
-
+# file: assert.mk
+# description: assert macro
+#
 
 # assert
 # @param $(1) condition
@@ -49,7 +48,6 @@ endef
 define expect_equal
 $(call expect, $(call equals $1, $2), $(1) does not equals to $(2)))
 endef
-
 
 define trace.i
 $(if $(ENABLE_TRACE),$(info $1),)

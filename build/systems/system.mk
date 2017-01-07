@@ -1,8 +1,7 @@
 # system.mk
-#
-# Created on: 2013-12-21
-#     Author: lenovo
+
+## System-dependent tools
 
 RM:=rm -f
 RMDIR:=rm -rf
-MAKEDIR:= mkdir -p
+MAKEDIR:=mkdir -p

@@ -1,12 +1,11 @@
-## makefile 
-#
+# top makefile
 
-## TARGET_PRODUCT, TARGET_PLATFORM应该由命令行参数输入，
-## 这里为测试方便，直接在makefile中定义
-TARGET_PRODUCT := 
-TARGET_PLATFORM := 
+## TARGET_PRODUCT TARGET_PLATFORM should be come from cmdline
+## it's here, just for convenience
+TARGET_PRODUCT :=
+TARGET_PLATFORM :=
 
-## 去掉空格等字符
+## strip writespace
 TARGET_PRODUCT := $(strip $(TARGET_PRODUCT))
 TARGET_PLATFORM:= $(strip $(TARGET_PLATFORM))
 TARGET_BUILD_TYPE:= $(strip $(TARGET_BUILD_TYPE))

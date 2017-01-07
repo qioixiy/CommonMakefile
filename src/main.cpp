@@ -1,15 +1,12 @@
-//============================================================================
-// Name        : main.cpp
-// Author      : crylearner
-// Version     :
-// Copyright   : Your copyright notice
-// Description : Hello World in C, Ansi-style
-//============================================================================
 
 #include "hello/hello.h"
+#include "module1/module1.h"
+#include "module2/module2.h"
 
-int main(void) {
+int main(int argc, char** argv) {
 	sayhello();
+    module1_init();
+    module2_init();
 
 	return 0;
 }
