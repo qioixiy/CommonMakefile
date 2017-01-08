@@ -3,10 +3,10 @@
 function usage()
 {
     cat<<USAGE
-    genmk <name> gen a module templete <name>.mk, default name is module.mk
+genmk <name> gen a module templete <name>.mk, default name is module.mk
 mm <dir> complie current or parent dir's module.mk
 mmm <module.mk> Compile the specified module
-    choosecombo --buildtype=<debug/release> --product=<name> --platform=<name>
+choosecombo --buildtype=<debug/release> --product=<name> --platform=<name>
 USAGE
 }
 

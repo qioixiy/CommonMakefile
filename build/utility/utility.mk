@@ -14,3 +14,9 @@ endef
 define quiet
 @
 endef
+
+ifeq ("$(origin V)", "command line")
+  Q =
+else
+  Q = @
+endif

@@ -9,11 +9,13 @@ DEPS:=$(OBJS:.o=.d)
 
 ## -MMD auto gen source code dependencies
 $(INTERMEDIATE_OBJ_PATH)/%.cpp.o: %.cpp
-	$(quiet)$(MAKEDIR) $(dir $@)
-	$(CXX) $(CPPFLAGS) $(CXXFLAGS) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -MT"$(@:%.o=%.d)" -c "$<" -o "$@"
+	$(quiet)echo CXX "$@"
+	$(Q)$(MAKEDIR) $(dir $@)
+	$(Q)$(CXX) $(CPPFLAGS) $(CXXFLAGS) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -MT"$(@:%.o=%.d)" -c "$<" -o "$@"
 $(INTERMEDIATE_OBJ_PATH)/%.c.o: %.c
-	$(quiet)$(MAKEDIR) $(dir $@)
-	$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -MT"$(@:%.o=%.d)" -c "$<" -o "$@"
+	$(quiet)echo CXX "$@"
+	$(Q)$(MAKEDIR) $(dir $@)
+	$(Q)$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -MT"$(@:%.o=%.d)" -c "$<" -o "$@"
 
 ifeq ($(filter $(MAKECMDGOALS), clean distclean),)
 -include $(DEPS)

@@ -1,6 +1,9 @@
 # vars-stash.mk
 
-$(info ALL_TARGETS:$(ALL_TARGETS))
+ifeq "$(Q)" ""
+  $(info ALL_TARGETS:$(ALL_TARGETS))
+endif
+
 $(ALL_TARGETS):AR:=$(AR)
 $(ALL_TARGETS):ARFLAGS:=$(ARFLAGS)
 $(ALL_TARGETS):ARLIBS:=$(ARFLAGS)
