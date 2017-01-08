@@ -20,10 +20,10 @@ BUILD_SHARED_LIBRARY:=$(TARGETS_PATH)/shared-library.mk
 ## import common function
 include $(BUILD_SYSTEM_PATH)/utility/utility.mk
 
-## if $(SHOT_MODULE) non-empty, Compile a specific module
+## if $(SPEC_MODULES) non-empty, Compile a specific module
 ## Multiple modules can be specified
-ifneq "$(SHOT_MODULE)" ""
-include $(SHOT_MODULE)
+ifneq "$(SPEC_MODULES)" ""
+include $(SPEC_MODULES)
 else
 MODULES:=src/hello/module.mk src/module1/module.mk src/module2/module.mk src/module.mk
 include $(MODULES)

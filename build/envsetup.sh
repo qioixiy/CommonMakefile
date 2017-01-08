@@ -90,8 +90,8 @@ function mm()
     elif [ ! "$M" ]; then
 	echo "Couldn't locate a makefile from the current directory."
     else
-	echo SHOT_MODULE="$M"
-	SHOT_MODULE=$M make -C $T
+        echo SPEC_MODULES="$M"
+        SPEC_MODULES=$M make -C $T
     fi
 }
 
@@ -104,13 +104,13 @@ function mmm()
     if [ "$T" ]; then
         for module in "$@"; do
 	    if [ -f $module ]; then
-		MODULES="$MODULES `echo $PWD/$module|sed 's:'$T'/::'`"
+                MODULES="$MODULES `echo $PWD/$module|sed 's:'$T'/::'`"
 	    else
-		echo "Couldn't locate module makefile of $module"
+                "Couldn't locate module makefile of $module"
 	    fi
 	done
-	echo SHOT_MODULE="$MODULES"
-        SHOT_MODULE="$MODULES" make -C $T
+        echo SPEC_MODULES="$MODULES"
+        SPEC_MODULES="$MODULES" make -C $T
     else
         echo "Couldn't locate the top of the tree.  Try setting TOP."
     fi
