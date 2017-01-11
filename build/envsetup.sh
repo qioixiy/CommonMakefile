@@ -77,6 +77,19 @@ function genmk()
     fi
 }
 
+
+# top make
+function m()
+{
+    local T=$(gettop)
+    if [ "$T" ]; then
+        make -C $T $@
+    else
+        echo "Couldn't locate the top of the tree.  Try setting TOP."
+        return 1
+    fi
+}
+
 # example: mm module.mk  hello/module.mk
 function mm()
 {
