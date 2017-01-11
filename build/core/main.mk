@@ -25,6 +25,7 @@ include $(BUILD_SYSTEM_PATH)/utility/utility.mk
 ifneq "$(SPEC_MODULES)" ""
 include $(SPEC_MODULES)
 else
-MODULES:=src/hello/module.mk src/module1/module.mk src/module2/module.mk src/module.mk
+MODULES := $(strip $(call all-makefiles-under,.))
+MODULES += $(strip $(call all-makefiles-under,src))
 include $(MODULES)
 endif

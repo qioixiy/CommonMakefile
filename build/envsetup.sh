@@ -73,7 +73,7 @@ function genmk()
 	echo "$name is existed.DO YOU wander to OVERWRITE it?"
 	return 1
     else
-	cp $T/build/templates/module.mk $name
+	cp $T/build/templates/module.mk.template $name
     fi
 }
 

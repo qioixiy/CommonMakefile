@@ -20,3 +20,12 @@ ifeq ("$(origin V)", "command line")
 else
   Q = @
 endif
+
+# $1 iterator path
+define walk
+  $(wildcard $(1)) $(foreach e, $(wildcard $(1)/*), $(call walk, $(e)))
+endef
+
+define all-makefiles-under
+  $(wildcard $(1)/*/module.mk)
+endef

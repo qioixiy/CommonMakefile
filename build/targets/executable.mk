@@ -9,7 +9,7 @@ distclean: $(TARGET).distclean
 
 ## define build execute obj rule
 $(TARGET): $(OBJS) $(LDLIBS)
-	$(quiet)echo EXE "$@"
+	$(quiet)echo LD "$@"
 	$(Q)$(MAKEDIR) $(dir $@)
 	$(Q)$(LD) $(LDFLAGS) -o $@ $^
 
