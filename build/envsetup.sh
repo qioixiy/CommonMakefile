@@ -13,7 +13,7 @@ USAGE
 ## @return top level dir
 function gettop
 {
-    local TOPFILE=build/main.mk
+    local TOPFILE=build/core/main.mk
     if [ -n "$TOP" -a -f "$TOP/$TOPFILE" ] ; then
         echo $TOP
     else

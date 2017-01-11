@@ -7,8 +7,8 @@ TARGET_PLATFORM :=
 
 ## strip writespace
 TARGET_PRODUCT := $(strip $(TARGET_PRODUCT))
-TARGET_PLATFORM:= $(strip $(TARGET_PLATFORM))
-TARGET_BUILD_TYPE:= $(strip $(TARGET_BUILD_TYPE))
+TARGET_PLATFORM := $(strip $(TARGET_PLATFORM))
+TARGET_BUILD_TYPE := $(strip $(TARGET_BUILD_TYPE))
 
 BUILD_SYSTEM_PATH := build
-include $(BUILD_SYSTEM_PATH)/main.mk
+include $(BUILD_SYSTEM_PATH)/core/main.mk
