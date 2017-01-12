@@ -13,7 +13,7 @@ $(INTERMEDIATE_OBJ_PATH)/%.cpp.o: %.cpp
 	$(Q)$(MAKEDIR) $(dir $@)
 	$(Q)$(CXX) $(CPPFLAGS) $(CXXFLAGS) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -MT"$(@:%.o=%.d)" -c "$<" -o "$@"
 $(INTERMEDIATE_OBJ_PATH)/%.c.o: %.c
-	$(quiet)echo CXX "$@"
+	$(quiet)echo CC "$@"
 	$(Q)$(MAKEDIR) $(dir $@)
 	$(Q)$(CC) $(CPPFLAGS) $(CFLAGS) -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" -MT"$(@:%.o=%.d)" -c "$<" -o "$@"
 

@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-void sayhello();
+void dump();
 
 #ifdef __cplusplus
 }
