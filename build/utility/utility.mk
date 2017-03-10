@@ -26,6 +26,8 @@ define walk
   $(wildcard $(1)) $(foreach e, $(wildcard $(1)/*), $(call walk, $(e)))
 endef
 
+quiet-command = $(if $(V), $1,$(if $(2), echo $2 &&$1, @$1))
+
 define all-makefiles-under
   $(wildcard $(1)/*/module.mk)
 endef

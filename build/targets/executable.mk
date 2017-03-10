@@ -11,7 +11,8 @@ distclean: $(TARGET).distclean
 $(TARGET): $(OBJS) $(LDLIBS)
 	$(quiet)echo LD "$@"
 	$(Q)$(MAKEDIR) $(dir $@)
-	$(Q)$(LD) $(LDFLAGS) -o $@ $^
+#	$(Q)$(LD) $(LDFLAGS) -o $@ $^ # what's wrong
+	$(Q)$(LD) $(LDFLAGS) -o $@ $< $(LDLIBS) $(LIBS)
 
 ## clean target
 .PHONY: $(TARGET).clean
