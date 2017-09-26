@@ -20,7 +20,7 @@ CPPFLAGS+=$(OPTIONS)
 
 ## for debug version
 ifeq "$(TARGET_BUILD_TYPE)" "debug"
-CPPFLAGS+=-D__DEBUG__
+CPPFLAGS+=-D__DEBUG__ -g
 endif
 
 # ENABLE_PLATFORM_SUFFIX

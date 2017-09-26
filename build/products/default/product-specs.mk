@@ -1,1 +1,1 @@
-../product-specs.mk
+../sample/product-specs.mk

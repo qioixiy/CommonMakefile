@@ -1,1 +1,1 @@
-../features.mk
+../sample/features.mk

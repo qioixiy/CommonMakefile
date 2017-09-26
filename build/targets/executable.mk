@@ -12,7 +12,7 @@ $(TARGET): $(OBJS) $(LDLIBS)
 	$(quiet)echo LD "$@"
 	$(Q)$(MAKEDIR) $(dir $@)
 #	$(Q)$(LD) $(LDFLAGS) -o $@ $^ # what's wrong
-	$(Q)$(LD) $(LDFLAGS) -o $@ $< $(LDLIBS) $(LIBS)
+	$(Q)$(LD) $(LDFLAGS) -o $@ $(OBJS) $(LDLIBS) $(LIBS)
 
 ## clean target
 .PHONY: $(TARGET).clean

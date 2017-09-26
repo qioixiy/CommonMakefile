@@ -1,1 +1,1 @@
-../vendor.mk
+../sample/vendor.mk
